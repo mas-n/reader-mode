@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reader Mode</title>
+  <style>
+    button { padding: 10px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <button id="activateReader">Activate Reader Mode</button>
+
+  <script>
+    document.getElementById('activateReader').addEventListener('click', () => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.scripting.executeScript({
+          target: { tabId: tabs[0].id },
+          files: ['content.js']
+        });
+      });
+    });
+  </script>
+</body>
+</html>

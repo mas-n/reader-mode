@@ -1,0 +1,46 @@
+/* Base styles for Reader Mode */
+body.reader-mode {
+    background: #fdfdfd;
+    color: #333;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  /* Headings styles */
+  body.reader-mode h1, body.reader-mode h2, body.reader-mode h3 {
+    font-weight: bold;
+    margin-bottom: 1.2em;
+  }
+  
+  /* Paragraph styles */
+  body.reader-mode p {
+    margin-bottom: 1.2em;
+  }
+  
+  /* Ensure links look like regular text, but underlined */
+  body.reader-mode a {
+    color: inherit; /* Match the regular text color */
+    text-decoration: underline; /* Keep the links underlined */
+    font-weight: normal;
+  }
+  
+  /* Hide images in Reader Mode */
+  body.reader-mode img {
+    display: none !important;
+  }
+  
+  /* Hide video elements */
+  body.reader-mode video,
+  body.reader-mode iframe,
+  body.reader-mode object {
+    display: none !important;
+  }
+  
+  /* General cleanup of unwanted elements */
+  body.reader-mode footer, body.reader-mode aside, body.reader-mode .sidebar {
+    display: none !important;
+  }
+  
